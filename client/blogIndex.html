@@ -1,0 +1,18 @@
+<template name="blogIndex">
+  <section id="blog-index" class="blog">
+    {{#if blogAdmin}}
+      <a href="{{pathFor 'newBlogPost'}}" id="new-blog-post-btn"><button>New</button></a>
+    {{/if}}
+    {{#each posts}}
+      <article itemscope class="blog-post-summary" itemtype="http://schema.org/BlogPosting">
+        <h2 itemprop="title"><a itemprop="url" href={{pathFor 'showBlogPost' id=_id}}>{{title}}</a></h2>
+        {{#if blogAdmin}}
+          <a class="edit-blog-post-btn" href="{{pathFor 'editBlogPost' id=_id}}"><button>Edit</button></a>
+        {{/if}}
+        <h3 class="blog-post-author" itemprop="author">By: {{authorName}}</h3>
+        <time itemprop="datePublished">{{publishedDateText}}</time>
+        <p class="blog-post-description" itemprop="description">{{description}}</p>
+      </article>
+    {{/each}}
+  </section>
+</template>

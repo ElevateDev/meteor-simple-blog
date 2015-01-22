@@ -1,0 +1,7 @@
+<template name="blogPostForm">
+  <section id="blog-form" class="blog">
+  {{#if subscriptionsReady}}
+    {{> quickForm collection="Posts" id="blogPostForm" type=formMode doc=editDoc omitFields="authorId,publishedDate"}}
+  {{/if}}
+  </section>
+</template>
