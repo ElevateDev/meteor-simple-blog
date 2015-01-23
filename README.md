@@ -2,6 +2,10 @@
 
 The purpose of this package is not to provide a blog that is the end all be all.  It is intended to be simply configurable, and extensible while providing the barebones boilerplate needed.
 
+# Setup
+
+The admin needs to be added to 'blog_admin' in Roles.GLOBAL_GROUP.
+
 # Styling
 
 No styling is included in this app. For a basic style using less try the following
@@ -42,3 +46,7 @@ No styling is included in this app. For a basic style using less try the followi
   }
 }
 ```
+
+# Routes
+
+Default route is /blog.  If logged in to a blog admin account you will see buttons to administer.

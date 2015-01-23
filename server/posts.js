@@ -7,7 +7,6 @@ Meteor.publish("BlogPost", function( id ){
 Meteor.publish("BlogPosts", function(){
   var posts = Posts.find();
   var authorIds = posts.map(function(p){ return p.authorId });
-  console.log( Meteor.users.find().fetch() );
   var authors = Meteor.users.find({'_id': {$in: authorIds}},{fields: {'profile.name': 1}});
   return [posts, authors];
 });
