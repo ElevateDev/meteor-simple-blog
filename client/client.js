@@ -11,7 +11,6 @@ Template.blogPostForm.helpers({
     return Posts.findOne(Blog._editing.get());
   },
   formMode: function(){
-    console.log( !!Blog._editing.get() ? "update" : "insert" );
     return !!Blog._editing.get() ? "update" : "insert";
   }
 });
@@ -37,5 +36,5 @@ AutoForm.addHooks(['blogPostForm'], {
 });
 
 UI.registerHelper('blogAdmin', function(){
-  return Roles.userIsInRole(Meteor.userId(), "blog_admin", Roles.GLOBAL_GROUP);
+  return Roles.userIsInRole(Meteor.userId(), Blog.adminRole, Roles.GLOBAL_GROUP);
 });
