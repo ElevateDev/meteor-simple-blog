@@ -52,5 +52,5 @@ Package.onUse(function(api) {
   ],'server');
 
   api.export("Blog", 'client');
-  api.export("Posts", 'client');
+  api.export("Posts");
 });
