@@ -1,20 +1,24 @@
 <template name="blogPost">
-  {{#with post}}
-    <article id="blog-post" class="blog" itemscope itemtype="http://schema.org/BlogPosting">
-      <h1 itemprop="title">
-        {{title}}
-      </h1>
-      {{#if blogAdmin}}
-        <a class="edit-blog-post-btn" href="{{pathFor 'editBlogPost' id=_id}}"><button>Edit</button></a>
-      {{/if}}
-      <h3 class="blog-post-author" itemprop="author">By: {{authorName}}</h3>
-      <time itemprop="datePublished">{{publishedDateText}}</time>
-      <p class="blog-post-description">
-        {{description}}
-      </p>
-      <div itemprop="articleBody" class="blog-post-body">
-        {{{body}}}
-      </div>
-    </article>
-  {{/with}}
+  {{#unless subscriptionsReady}}
+    {{> spinner}}
+  {{else}}
+    {{#with post}}
+      <article id="blog-post" class="blog" itemscope itemtype="http://schema.org/BlogPosting">
+        <h1 itemprop="title">
+          {{title}}
+        </h1>
+        {{#if blogAdmin}}
+          <a class="edit-blog-post-btn" href="{{pathFor 'editBlogPost' id=_id}}"><button>Edit</button></a>
+        {{/if}}
+        <h3 class="blog-post-author" itemprop="author">By: {{authorName}}</h3>
+        <time itemprop="datePublished">{{publishedDateText}}</time>
+        <p class="blog-post-description">
+          {{description}}
+        </p>
+        <div itemprop="articleBody" class="blog-post-body">
+          {{{body}}}
+        </div>
+      </article>
+    {{/with}}
+  {{/unless}}
 </template>

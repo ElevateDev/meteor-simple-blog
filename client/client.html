@@ -1,7 +1,9 @@
 <template name="blogPostForm">
   <section id="blog-form" class="blog">
-  {{#if subscriptionsReady}}
-    {{> quickForm collection="Posts" id="blogPostForm" type=formMode doc=editDoc omitFields="authorId,publishedDate"}}
-  {{/if}}
+    {{#unless subscriptionsReady}}
+      {{> spinner}}
+    {{else}}
+      {{> quickForm collection="Posts" id="blogPostForm" type=formMode doc=editDoc omitFields="authorId,publishedDate"}}
+    {{/unless}}
   </section>
 </template>
