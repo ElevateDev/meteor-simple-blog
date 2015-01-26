@@ -54,3 +54,8 @@ Package.onUse(function(api) {
   api.export("Blog", 'client');
   api.export("Posts");
 });
+
+Package.on_test(function (api) {
+  api.use(['elevatedevdesign:simple-blog','tinytest', 'test-helpers','aldeed:simple-schema'], ['client', 'server']);
+  api.add_files('tests/client.js', ['client']);
+});
