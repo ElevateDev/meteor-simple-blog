@@ -51,7 +51,7 @@ Package.onUse(function(api) {
     'server/posts.js',
   ],'server');
 
-  api.export("Blog", 'client');
+  api.export("Blog");
   api.export("Posts");
 });
 
