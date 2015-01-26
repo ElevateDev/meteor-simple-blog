@@ -4,6 +4,6 @@ Template.blogIndex.subscriptions = function(){
 
 Template.blogIndex.helpers({
   posts: function(){
-    return Posts.find({},{$sort: "publishedDate"});
+    return Posts.find({},{sort: {"publishedDate": -1}});
   }
 });
