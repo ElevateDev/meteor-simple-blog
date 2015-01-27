@@ -15,7 +15,7 @@ dburles:collection-helpers@1.0.2
 ddp@1.0.14
 deps@1.0.6
 ejson@1.0.5
-elevatedevdesign:simple-blog@0.0.5
+elevatedevdesign:simple-blog@0.0.6
 elevatedevdesign:template-subscriptions@0.0.1
 follower-livedata@1.0.3
 geojson-utils@1.0.2
@@ -33,6 +33,7 @@ iron:url@1.0.7
 jquery@1.11.3
 json@1.0.2
 livedata@1.0.12
+local-test:elevatedevdesign:simple-blog@0.0.6
 localstorage@1.0.2
 logging@1.0.6
 matb33:collection-hooks@0.7.9
@@ -54,6 +55,8 @@ service-configuration@1.0.3
 spacebars@1.0.5
 spacebars-compiler@1.0.4
 templating@1.0.11
+test-helpers@1.0.3
+tinytest@1.0.4
 tracker@1.0.5
 ui@1.0.5
 underscore@1.0.2
