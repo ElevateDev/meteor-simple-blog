@@ -1,7 +1,7 @@
 Package.describe({
   name: 'elevatedevdesign:simple-blog',
   summary: 'Simple flexible blog for meteor',
-  version: '0.0.7',
+  version: '0.0.8-rc.1',
   git: 'https://github.com/ElevateDevelopmentAndDesign/meteor-simple-blog'
 });
 

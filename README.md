@@ -6,6 +6,22 @@ The purpose of this package is not to provide a blog that is the end all be all.
 
 The admin needs to be added to 'blog_admin' in Roles.GLOBAL_GROUP.
 
+# Additional Packages
+
+Composition is a powerful thing.
+
+## SEO
+
+  meteor add elevatedevdesign:simple-blog-seo
+
+## DISQUS
+
+  meteor add elevatedevdesign:simple-blog-disqus
+
+Then in your code
+
+  Blog.disqusShortname = 'YOUR_SHORTNAME';
+
 # Styling
 
 No styling is included in this app. For a basic style using less try the following
