@@ -22,7 +22,9 @@
           {{{body}}}
         </div>
         {{#each afterBody}}
-          {{> this}}
+          {{#with post}}
+            {{> this}}
+          {{/with}}
         {{/each}}
       </article>
     {{/with}}
