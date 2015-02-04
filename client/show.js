@@ -1,6 +1,6 @@
 Template.blogPost.subscriptions = function(){
   return [["BlogPost",Blog._showing.get()]];
-}
+};
 
 Template.blogPost.helpers({
   post: function(){

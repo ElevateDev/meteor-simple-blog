@@ -8,7 +8,7 @@
           {{title}}
         </h1>
         {{#each afterTitle}}
-          {{> this}}
+          {{> UI.dynamic template=this data=..}}
         {{/each}}
         {{#if blogAdmin}}
           <a class="edit-blog-post-btn" href="{{pathFor 'editBlogPost' id=_id}}"><button>Edit</button></a>
@@ -22,9 +22,7 @@
           {{{body}}}
         </div>
         {{#each afterBody}}
-          {{#with post}}
-            {{> this}}
-          {{/with}}
+          {{> UI.dynamic template=this data=..}}
         {{/each}}
       </article>
     {{/with}}
