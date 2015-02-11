@@ -1,11 +1,12 @@
 Meteor.publish("BlogPost", function( id ){
+  check( id, String );
   var post = Posts.findOne({'_id': id});
-  if( Roles.userIsInRole( this.userId, Blog.adminRole, Roles.GLOBAL_GROUP ) || post.published ){
+  if( !post ){ return this.stop; }
+  if( post && Roles.userIsInRole( this.userId, Blog.adminRole, Roles.GLOBAL_GROUP ) || post.published ){
     var author = Meteor.users.find({'_id': post.authorId},{fields: {'profile': 1}});
     return [Posts.find({'_id': id}), author];
-  }else{
-    return [];
   }
+  return this.stop();
 });
 
 Meteor.publish("BlogPosts", function(){

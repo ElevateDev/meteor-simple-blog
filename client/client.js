@@ -1,11 +1,3 @@
-Template.blogPostForm.subscriptions = function(){ 
-  if( Blog._editing.get() ){
-    return [["BlogPost", Blog._editing.get()]];
-  }else{
-    return [];
-  }
-};
-
 Template.blogPostForm.helpers({
   editDoc: function(){
     return Posts.findOne(Blog._editing.get());
