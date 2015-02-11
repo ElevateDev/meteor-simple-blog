@@ -11,12 +11,12 @@ Meteor.publish("BlogPost", function( id ){
 Meteor.publish("BlogPosts", function(){
   if( Roles.userIsInRole( this.userId, "blog_admin", Roles.GLOBAL_GROUP ) ){
     var posts = Posts.find();
-    var authorIds = posts.map(function(p){ return p.authorId });
+    var authorIds = posts.map(function(p){ return p.authorId; });
     var authors = Meteor.users.find({'_id': {$in: authorIds}},{fields: {'profile': 1}});
     return [posts, authors];
   }else{
     var posts = Posts.find({published: true});
-    var authorIds = posts.map(function(p){ return p.authorId });
+    var authorIds = posts.map(function(p){ return p.authorId; });
     var authors = Meteor.users.find({'_id': {$in: authorIds}},{fields: {'profile': 1}});
     return [posts, authors];
   }
