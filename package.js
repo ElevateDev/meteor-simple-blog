@@ -1,7 +1,7 @@
 Package.describe({
   name: 'elevatedevdesign:simple-blog',
   summary: 'Simple flexible blog for meteor',
-  version: '0.0.8',
+  version: '0.0.9',
   git: 'https://github.com/ElevateDevelopmentAndDesign/meteor-simple-blog'
 });
 
@@ -25,8 +25,7 @@ Package.onUse(function(api) {
     'alanning:roles@1.2.13',
     'dburles:collection-helpers@1.0.2',
     'matb33:collection-hooks@0.7.9',
-    'mongo',
-     'elevatedevdesign:template-subscriptions@0.0.1'
+    'mongo'
   ]);
 
 
