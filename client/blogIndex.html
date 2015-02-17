@@ -7,7 +7,7 @@
       <article itemscope class="blog-post-summary" itemtype="http://schema.org/BlogPosting">
         <h2 itemprop="title"><a itemprop="url" href={{pathFor 'showBlogPost' id=_id}}>{{title}}</a></h2>
         {{#if blogAdmin}}
-          <a class="edit-blog-post-btn" href="{{pathFor 'editBlogPost' id=_id}}"><button>Edit</button></a>
+          <a class="edit-blog-post-btn" href="{{pathFor 'editBlogPost' id=_id slug=slug}}"><button>Edit</button></a>
         {{/if}}
         <h3 class="blog-post-author" itemprop="author">By: {{authorName}}</h3>
         <time itemprop="datePublished">{{publishedDateText}}</time>
